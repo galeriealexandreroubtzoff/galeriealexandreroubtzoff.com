@@ -13,3 +13,6 @@
 /favicon.ico /favicon.png 301
 # Old image URLs now live on the public R2 bucket
 /public/* https://images.galeriealexandreroubtzoff.com/:splat 301
+# Old slugs of renamed / misspelled exhibitions
+/events/exposition-ramadanesque-31 /events/art-contemporain-31 301
+/events/doles-de-trames-40 /events/droles-de-trames-40 301

@@ -119,7 +119,7 @@ ${body}
     </div>
     <div class="partner-col">
       <h3>Maison de vente</h3>
-      <a class="partner" href="https://www.marsa-encheres.com" target="_blank" rel="noopener"><strong>Marsa Enchères</strong><span>Première Maison de Vente en Tunisie</span></a>
+      <a class="partner" href="https://www.marsa-encheres.com/" target="_blank" rel="noopener"><strong>Marsa Enchères</strong><span>Première Maison de Vente en Tunisie</span></a>
     </div>
   </div>
   <p class="copyright">© ${new Date().getFullYear()} Galerie Alexandre Roubtzoff.</p>
@@ -236,6 +236,7 @@ ${pageHeader(a.name, [['/artists', 'Artistes']])}
   <div><p class="eyebrow">Artiste</p><h2>${esc(artistLabel(a))}</h2>${works.length ? `<p class="muted">${plural(works.length, 'oeuvre')}</p>` : ''}</div>
 </div>
 ${a.bio ? `<div class="body-content bio"><p>${esc(a.bio)}</p></div>` : ''}
+${a.marsaUrl ? `<p class="body-content marsa-link"><a class="cta-link" href="${esc(a.marsaUrl)}">Voir les oeuvres de ${esc(a.name)} chez Marsa Enchères →</a></p>` : ''}
 ${works.length ? grid(works.map(artworkCard)) : ''}
 </div>`, { description: a.bio.slice(0, 160), image: a.photo });
 }
