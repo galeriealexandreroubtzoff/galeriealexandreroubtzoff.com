@@ -1,0 +1,5 @@
+dist/
+.env
+# Images live in the R2 bucket; this folder is only a staging area for npm run upload-images.
+images/*
+!images/.gitkeep

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="800" fill="#f4f0eb"/>
+  <g fill="none" stroke="#e2cfa6" stroke-width="6" transform="translate(320 330)">
+    <rect x="0" y="0" width="160" height="120" rx="6"/>
+    <circle cx="52" cy="40" r="14"/>
+    <path d="M8 112l52-50 34 30 26-22 32 42"/>
+  </g>
+  <text x="400" y="500" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#a8875a">Galerie Alexandre Roubtzoff</text>
+  <text x="400" y="540" text-anchor="middle" font-family="sans-serif" font-size="18" letter-spacing="3" fill="#c99a3b">IMAGE À VENIR</text>
+</svg>

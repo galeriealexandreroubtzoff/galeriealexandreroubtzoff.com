@@ -1,0 +1,11 @@
+{
+  "name": "galeriealexandreroubtzoff",
+  "private": true,
+  "type": "module",
+  "description": "Static site for galeriealexandreroubtzoff.com. No dependencies: plain Node (>= 22) scripts only.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "upload-images": "node --env-file-if-exists=.env scripts/upload-images.mjs"
+  }
+}

@@ -1,0 +1,15 @@
+# Old dynamic routes that no longer exist on the static site
+/home / 301
+/index.php / 301
+/connexion / 302
+/inscription / 302
+/oublier / 302
+/docs / 302
+/buy / 302
+/sell / 302
+/byroubtzoff / 302
+# The listing used to be /events?past; query strings are ignored, so /events serves it.
+/artists/najet-edhahbi-552 /artists/najet-dhahbi-552 301
+/favicon.ico /favicon.png 301
+# Old image URLs now live on the public R2 bucket
+/public/* https://images.galeriealexandreroubtzoff.com/:splat 301
