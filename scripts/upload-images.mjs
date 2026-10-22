@@ -18,7 +18,8 @@ if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY) {
   console.error('Set R2_ACCOUNT_ID, R2_ACCESS_KEY_ID and R2_SECRET_ACCESS_KEY (see the comment at the top of this file).');
   process.exit(1);
 }
-const HOST = `${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
+// The bucket was created with EU jurisdiction, which has its own S3 endpoint.
+const HOST = `${R2_ACCOUNT_ID}.eu.r2.cloudflarestorage.com`;
 
 const sha256 = (data) => crypto.createHash('sha256').update(data).digest('hex');
 const hmac = (key, data) => crypto.createHmac('sha256', key).update(data).digest();
@@ -50,7 +51,7 @@ for (const rel of files) {
   const body = fs.readFileSync(path.join(DIR, rel));
   const md5 = crypto.createHash('md5').update(body).digest('hex');
   const head = await signedRequest('HEAD', key);
-  if (head.ok && head.headers.get('etag')?.replace(/"/g, '') === md5) { skipped++; continue; }
+  if (head.ok && head.headers.get('etag')?.replace(/^W\//, '').replace(/"/g, '') === md5) { skipped++; continue; }
   const res = await signedRequest('PUT', key, body, { 'content-type': type, 'cache-control': 'public, max-age=86400' });
   if (res.ok) { console.log(`uploaded ${key}`); uploaded++; }
   else { console.error(`FAILED ${key}: ${res.status} ${await res.text()}`); failed++; }
