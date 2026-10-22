@@ -268,4 +268,3 @@ section.hero-3col { display: grid; grid-template-columns: 1fr 2fr 1fr; grid-temp
 .site-footer .partner span { font-size: .85em; color: #bda99f; }
 .site-footer .copyright { text-align: center; margin: var(--space-3) 0 0; padding-top: var(--space-2); border-top: 1px solid rgba(244,240,235,.35); font-size: .72em; }
 @media (max-width: 720px) { .site-footer .cols { grid-template-columns: 1fr; } .site-footer { padding: var(--space-4); } }
-.marsa-link { margin: 0 0 var(--space-4); }

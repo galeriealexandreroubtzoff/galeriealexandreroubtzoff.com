@@ -213,7 +213,7 @@ page('/', 'index.html', '', `
 <section class="services">
   <h2>La galerie</h2>
   <div class="cols">
-    <div><h3>Exposer l'art d'aujourd'hui</h3><p>Fondée le 26 novembre 2014 par Seif et Sabrine Chaouch à Marsa Plage, la galerie promeut l'art en Tunisie et fait découvrir les nouveaux talents des arts plastiques, au fil d'expositions personnelles et collectives.</p><div class="text-center"><a class="btn secondary" href="/presentation">En savoir plus</a></div></div>
+    <div><h3>Exposer l'art d'aujourd'hui</h3><p>Fondée le 26 novembre 2014 par Seif et Sabrine Chaouch à Marsa Plage, la galerie promeut l'art en Tunisie et fait découvrir les nouveaux talents des arts plastiques, au fil d'expositions personnelles et collectives. Elle partage ses locaux avec <a href="https://www.marsa-encheres.com/">Marsa Enchères</a>, la maison de vente aux enchères fondée par Seif Chaouch en 2017.</p><div class="text-center"><a class="btn secondary" href="/presentation">En savoir plus</a></div></div>
     <div><h3>Alexandre Roubtzoff</h3><p>La galerie porte le nom du peintre Alexandre Roubtzoff (1884-1949), « le peintre de la Tunisie », inhumé à Tunis, dont la lumière et les scènes de la vie tunisienne ont marqué l'histoire de l'art du pays.</p><div class="text-center"><a class="btn secondary" href="/roubtzoff">En savoir plus</a></div></div>
   </div>
 </section>
@@ -236,7 +236,6 @@ ${pageHeader(a.name, [['/artists', 'Artistes']])}
   <div><p class="eyebrow">Artiste</p><h2>${esc(artistLabel(a))}</h2>${works.length ? `<p class="muted">${plural(works.length, 'oeuvre')}</p>` : ''}</div>
 </div>
 ${a.bio ? `<div class="body-content bio"><p>${esc(a.bio)}</p></div>` : ''}
-${a.marsaUrl ? `<p class="body-content marsa-link"><a class="cta-link" href="${esc(a.marsaUrl)}">Voir les oeuvres de ${esc(a.name)} chez Marsa Enchères →</a></p>` : ''}
 ${works.length ? grid(works.map(artworkCard)) : ''}
 </div>`, { description: a.bio.slice(0, 160), image: a.photo });
 }
